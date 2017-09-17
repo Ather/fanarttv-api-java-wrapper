@@ -1,2 +1,34 @@
 # fanarttv-api-java-wrapper
-Fanart.TV API Wrapper in Java.
+
+Fanart.TV API Wrapper written in Java.
+
+Currently supported [Fanart.TV API](http://docs.fanarttv.apiary.io/) version: `3.0`
+
+## Usage
+Dependencies (specified in pom.xml):
+* [gson-2.8.1](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.1)
+* [httpclient-4.5.3](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient/4.5.3)
+* [httpcore-4.4.6](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore/4.4.6)
+* [commons-logging-1.2](https://mvnrepository.com/artifact/commons-logging/commons-logging/1.2)
+* [commons-codec-1.9](https://mvnrepository.com/artifact/commons-codec/commons-codec/1.9)
+
+```java
+try {
+  FanartTv fanartTv = new FanartTv(API_KEY);
+  Movie movie = fanartTv.movies().get(330459).execute();
+  System.out.println(movie.getName());
+ } catch (IOException e) {
+  e.printStackTrace();
+ }
+ 
+ try {
+  FanartTv fanartTv = new FanartTv(API_KEY);
+  List<LatestTV> tvUpdates = fanartTv.tv().latest().get().execute();
+  System.out.println(tvUpdates.get(0).getTotalImages());
+ } catch (IOException e) {
+  e.printStackTrace();
+ }
+ ```
+ 
+ ## License
+ Licensed with Apache 2.0
