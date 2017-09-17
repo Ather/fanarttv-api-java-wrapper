@@ -12,17 +12,25 @@ Dependencies (specified in pom.xml):
 * [commons-logging-1.2](https://mvnrepository.com/artifact/commons-logging/commons-logging/1.2)
 * [commons-codec-1.9](https://mvnrepository.com/artifact/commons-codec/commons-codec/1.9)
 
+It is recommended that you pass your own personal API key to the wrapper,
+which can be generated [here](https://fanart.tv/get-an-api-key/) after logging into the website.
+
+## Examples:
+
 ```java
 try {
-  FanartTv fanartTv = new FanartTv(API_KEY);
+  // This uses the default project API Key,
+  // But it is recommended to pass your own personal API Key.
+  FanartTv fanartTv = new FanartTv();
   Movie movie = fanartTv.movies().get(330459).execute();
   System.out.println(movie.getName());
  } catch (IOException e) {
   e.printStackTrace();
  }
- 
+```
+```java
  try {
-  FanartTv fanartTv = new FanartTv(API_KEY);
+  FanartTv fanartTv = new FanartTv(PERSONAL_API_KEY);
   List<LatestTV> tvUpdates = fanartTv.tv().latest().get().execute();
   System.out.println(tvUpdates.get(0).getTotalImages());
  } catch (IOException e) {
