@@ -26,9 +26,9 @@ import life.thehoard.thirdparty.api.fanarttv.http.RequestMethod;
 
 /**
  * 
- * Java API Wrapper for <a href="https://fanart.tv">Fanart.TV</a>
- * <br>
- * API Docs available here: <a href="http://docs.fanarttv.apiary.io/">http://docs.fanarttv.apiary.io/</a>
+ * Java API Wrapper for <a href="https://fanart.tv">Fanart.TV</a> <br>
+ * API Docs available here:
+ * <a href="http://docs.fanarttv.apiary.io/">http://docs.fanarttv.apiary.io/</a>
  * 
  * @author Michael Haas
  * @since The Hoard Media Server - 0.3.6.45
@@ -39,12 +39,17 @@ public class FanartTv {
 	 */
 	private static final String DEFAULT_ROOT_URL = "http://webservice.fanart.tv";
 	private static final String DEFAULT_SERVICE_URL = "/v3/";
-	
+
 	/**
 	 * Default complete API URL
 	 */
 	private static final String DEFAULT_API_URL = DEFAULT_ROOT_URL + DEFAULT_SERVICE_URL;
 	
+	/**
+	 * Default API Key
+	 */
+	private static final String DEFAULT_API_KEY = "66145089d58c7d47fa13d841e1eff7e0";
+
 	/*
 	 * Root URL for the API
 	 */
@@ -65,21 +70,24 @@ public class FanartTv {
 		this.apiUrl = apiUrl;
 		this.apiKey = apiKey;
 	}
-	
+
 	/**
-	 * Create a new FanartTV Client using the default API URL and the supplied apiKey
-	 * @param apiKey API Key to use in the client
+	 * Create a new FanartTV Client using the default API URL and the supplied
+	 * apiKey
+	 * 
+	 * @param apiKey
+	 *            API Key to use in the client. This can either be a project or
+	 *            personal API Key
 	 */
 	public FanartTv(String apiKey) {
 		this(DEFAULT_API_URL, apiKey);
 	}
 
 	/**
-	 * Create a new FanartTV Client using the default API URL.
-	 * This requires the use of the {@link #setApiKey(String)} method
+	 * Create a new FanartTV Client using the default API URL and key
 	 */
 	public FanartTv() {
-		this(DEFAULT_API_URL, "");
+		this(DEFAULT_API_URL, DEFAULT_API_KEY);
 	}
 
 	/**
@@ -221,9 +229,8 @@ public class FanartTv {
 				 *            stamp
 				 */
 				protected Get() {
-					super(FanartTv.this, RequestMethod.GET, "movies/latest",
-							new TypeToken<java.util.List<life.thehoard.thirdparty.api.fanarttv.endpoints.movie.LatestMovie>>() {
-							}.getType());
+					super(FanartTv.this, RequestMethod.GET, "movies/latest", new TypeToken<java.util.List<life.thehoard.thirdparty.api.fanarttv.endpoints.movie.LatestMovie>>() {
+					}.getType());
 				}
 
 				/**
@@ -461,9 +468,8 @@ public class FanartTv {
 				 * Create a Get request for the latest music artist updates
 				 */
 				protected Get() {
-					super(FanartTv.this, RequestMethod.GET, "music/latest",
-							new TypeToken<java.util.List<life.thehoard.thirdparty.api.fanarttv.endpoints.music.LatestArtist>>() {
-							}.getType());
+					super(FanartTv.this, RequestMethod.GET, "music/latest", new TypeToken<java.util.List<life.thehoard.thirdparty.api.fanarttv.endpoints.music.LatestArtist>>() {
+					}.getType());
 				}
 
 				/**
@@ -635,10 +641,12 @@ public class FanartTv {
 	public String getApiUrl() {
 		return this.apiUrl;
 	}
-	
+
 	/**
 	 * Set the API URL
-	 * @param apiUrl API URL to use for Fanart.TV
+	 * 
+	 * @param apiUrl
+	 *            API URL to use for Fanart.TV
 	 */
 	public void setApiUrl(String apiUrl) {
 		this.apiUrl = apiUrl;
@@ -651,10 +659,12 @@ public class FanartTv {
 	public String getApiKey() {
 		return this.apiKey;
 	}
-	
+
 	/**
 	 * Set the API Key
-	 * @param apiKey API Key to use
+	 * 
+	 * @param apiKey
+	 *            API Key to use
 	 */
 	public void setApiKey(String apiKey) {
 		this.apiKey = apiKey;
