@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package life.thehoard.thirdparty.api.fanarttv.endpoints.music;
+package media.thehoard.thirdparty.api.fanarttv.endpoints.music;
 
 /**
  * Colour enumerated object to be used with the Fanart.TV API

@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package life.thehoard.thirdparty.api.fanarttv;
+package media.thehoard.thirdparty.api.fanarttv;
 
 import java.util.Date;
 
@@ -21,8 +21,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
-import life.thehoard.thirdparty.api.fanarttv.http.FanartTvRequest;
-import life.thehoard.thirdparty.api.fanarttv.http.RequestMethod;
+import media.thehoard.thirdparty.api.fanarttv.http.FanartTvRequest;
+import media.thehoard.thirdparty.api.fanarttv.http.RequestMethod;
 
 /**
  * 
@@ -133,7 +133,7 @@ public class FanartTv {
 		 * @author Michael Haas
 		 *
 		 */
-		public class Get extends FanartTvRequest<Object, life.thehoard.thirdparty.api.fanarttv.endpoints.movie.Movie> {
+		public class Get extends FanartTvRequest<Object, media.thehoard.thirdparty.api.fanarttv.endpoints.movie.Movie> {
 			/**
 			 * Construct a get request based on an IMDb ID
 			 * 
@@ -141,7 +141,7 @@ public class FanartTv {
 			 *            IMDb ID of a Movie
 			 */
 			protected Get(String imdb_id) {
-				super(FanartTv.this, RequestMethod.GET, "movies/" + imdb_id, life.thehoard.thirdparty.api.fanarttv.endpoints.movie.Movie.class);
+				super(FanartTv.this, RequestMethod.GET, "movies/" + imdb_id, media.thehoard.thirdparty.api.fanarttv.endpoints.movie.Movie.class);
 			}
 
 			/**
@@ -209,7 +209,7 @@ public class FanartTv {
 			 * @author Michael Haas
 			 *
 			 */
-			public class Get extends FanartTvRequest<Object, java.util.List<life.thehoard.thirdparty.api.fanarttv.endpoints.movie.LatestMovie>> {
+			public class Get extends FanartTvRequest<Object, java.util.List<media.thehoard.thirdparty.api.fanarttv.endpoints.movie.LatestMovie>> {
 				/**
 				 * Create a Get request for the latest movie updates after a given date
 				 * 
@@ -217,7 +217,7 @@ public class FanartTv {
 				 */
 				protected Get(Date dateFrom) {
 					super(FanartTv.this, RequestMethod.GET, "movies/latest/" + dateFrom.getTime(),
-							new TypeToken<java.util.List<life.thehoard.thirdparty.api.fanarttv.endpoints.movie.LatestMovie>>() {
+							new TypeToken<java.util.List<media.thehoard.thirdparty.api.fanarttv.endpoints.movie.LatestMovie>>() {
 							}.getType());
 				}
 
@@ -229,7 +229,7 @@ public class FanartTv {
 				 *            stamp
 				 */
 				protected Get() {
-					super(FanartTv.this, RequestMethod.GET, "movies/latest", new TypeToken<java.util.List<life.thehoard.thirdparty.api.fanarttv.endpoints.movie.LatestMovie>>() {
+					super(FanartTv.this, RequestMethod.GET, "movies/latest", new TypeToken<java.util.List<media.thehoard.thirdparty.api.fanarttv.endpoints.movie.LatestMovie>>() {
 					}.getType());
 				}
 
@@ -303,9 +303,9 @@ public class FanartTv {
 			 * @author Michael Haas
 			 *
 			 */
-			public class Get extends FanartTvRequest<Object, life.thehoard.thirdparty.api.fanarttv.endpoints.music.Artist> {
+			public class Get extends FanartTvRequest<Object, media.thehoard.thirdparty.api.fanarttv.endpoints.music.Artist> {
 				protected Get(String musicbrainz_id) {
-					super(FanartTv.this, RequestMethod.GET, "music/" + musicbrainz_id, life.thehoard.thirdparty.api.fanarttv.endpoints.music.Artist.class);
+					super(FanartTv.this, RequestMethod.GET, "music/" + musicbrainz_id, media.thehoard.thirdparty.api.fanarttv.endpoints.music.Artist.class);
 				}
 			}
 		}
@@ -342,7 +342,7 @@ public class FanartTv {
 			 * @author Michael Haas
 			 *
 			 */
-			public class Get extends FanartTvRequest<Object, life.thehoard.thirdparty.api.fanarttv.endpoints.music.Album> {
+			public class Get extends FanartTvRequest<Object, media.thehoard.thirdparty.api.fanarttv.endpoints.music.Album> {
 				/**
 				 * Create a Get request for an album based on the MusicBrainz release group ID
 				 * 
@@ -350,7 +350,7 @@ public class FanartTv {
 				 *            Release group ID used on MusicBrainz
 				 */
 				protected Get(String musicbrainz_releasegroup_id) {
-					super(FanartTv.this, RequestMethod.GET, "music/albums/" + musicbrainz_releasegroup_id, life.thehoard.thirdparty.api.fanarttv.endpoints.music.Album.class);
+					super(FanartTv.this, RequestMethod.GET, "music/albums/" + musicbrainz_releasegroup_id, media.thehoard.thirdparty.api.fanarttv.endpoints.music.Album.class);
 				}
 			}
 		}
@@ -387,7 +387,7 @@ public class FanartTv {
 			 * @author Michael Haas
 			 *
 			 */
-			public class Get extends FanartTvRequest<Object, life.thehoard.thirdparty.api.fanarttv.endpoints.music.Label> {
+			public class Get extends FanartTvRequest<Object, media.thehoard.thirdparty.api.fanarttv.endpoints.music.Label> {
 				/**
 				 * Create a get request with a given MusicBrainz label ID
 				 * 
@@ -395,7 +395,7 @@ public class FanartTv {
 				 *            Label ID from MusicBrainz
 				 */
 				protected Get(String musicbrainz_label_id) {
-					super(FanartTv.this, RequestMethod.GET, "music/labels/" + musicbrainz_label_id, life.thehoard.thirdparty.api.fanarttv.endpoints.music.Label.class);
+					super(FanartTv.this, RequestMethod.GET, "music/labels/" + musicbrainz_label_id, media.thehoard.thirdparty.api.fanarttv.endpoints.music.Label.class);
 				}
 			}
 		}
@@ -452,7 +452,7 @@ public class FanartTv {
 			 * @author Michael Haas
 			 *
 			 */
-			public class Get extends FanartTvRequest<Object, java.util.List<life.thehoard.thirdparty.api.fanarttv.endpoints.music.LatestArtist>> {
+			public class Get extends FanartTvRequest<Object, java.util.List<media.thehoard.thirdparty.api.fanarttv.endpoints.music.LatestArtist>> {
 				/**
 				 * Create a Get request for the latest music artist updates after a given Date
 				 * 
@@ -460,7 +460,7 @@ public class FanartTv {
 				 */
 				protected Get(Date dateFrom) {
 					super(FanartTv.this, RequestMethod.GET, "music/latest/" + dateFrom.getTime(),
-							new TypeToken<java.util.List<life.thehoard.thirdparty.api.fanarttv.endpoints.music.LatestArtist>>() {
+							new TypeToken<java.util.List<media.thehoard.thirdparty.api.fanarttv.endpoints.music.LatestArtist>>() {
 							}.getType());
 				}
 
@@ -468,7 +468,7 @@ public class FanartTv {
 				 * Create a Get request for the latest music artist updates
 				 */
 				protected Get() {
-					super(FanartTv.this, RequestMethod.GET, "music/latest", new TypeToken<java.util.List<life.thehoard.thirdparty.api.fanarttv.endpoints.music.LatestArtist>>() {
+					super(FanartTv.this, RequestMethod.GET, "music/latest", new TypeToken<java.util.List<media.thehoard.thirdparty.api.fanarttv.endpoints.music.LatestArtist>>() {
 					}.getType());
 				}
 
@@ -527,14 +527,14 @@ public class FanartTv {
 		 * @author Michael Haas
 		 *
 		 */
-		public class Get extends FanartTvRequest<Object, life.thehoard.thirdparty.api.fanarttv.endpoints.tv.TV> {
+		public class Get extends FanartTvRequest<Object, media.thehoard.thirdparty.api.fanarttv.endpoints.tv.TV> {
 			/**
 			 * Create a Get request based on an ID From TheTVDB
 			 * 
 			 * @param thetvdb_id
 			 */
 			protected Get(int thetvdb_id) {
-				super(FanartTv.this, RequestMethod.GET, "tv/" + thetvdb_id, life.thehoard.thirdparty.api.fanarttv.endpoints.tv.TV.class);
+				super(FanartTv.this, RequestMethod.GET, "tv/" + thetvdb_id, media.thehoard.thirdparty.api.fanarttv.endpoints.tv.TV.class);
 			}
 		}
 
@@ -590,7 +590,7 @@ public class FanartTv {
 			 * @author Michael Haas
 			 *
 			 */
-			public class Get extends FanartTvRequest<Object, java.util.List<life.thehoard.thirdparty.api.fanarttv.endpoints.tv.LatestTV>> {
+			public class Get extends FanartTvRequest<Object, java.util.List<media.thehoard.thirdparty.api.fanarttv.endpoints.tv.LatestTV>> {
 				/**
 				 * Create a Get request for TV show updates based on a Date object
 				 * 
@@ -599,7 +599,7 @@ public class FanartTv {
 				 */
 				protected Get(Date dateFrom) {
 					super(FanartTv.this, RequestMethod.GET, "tv/latest/" + dateFrom.getTime(),
-							new TypeToken<java.util.List<life.thehoard.thirdparty.api.fanarttv.endpoints.tv.LatestTV>>() {
+							new TypeToken<java.util.List<media.thehoard.thirdparty.api.fanarttv.endpoints.tv.LatestTV>>() {
 							}.getType());
 				}
 
@@ -607,7 +607,7 @@ public class FanartTv {
 				 * Create a Get request for TV show updates
 				 */
 				protected Get() {
-					super(FanartTv.this, RequestMethod.GET, "tv/latest", new TypeToken<java.util.List<life.thehoard.thirdparty.api.fanarttv.endpoints.tv.LatestTV>>() {
+					super(FanartTv.this, RequestMethod.GET, "tv/latest", new TypeToken<java.util.List<media.thehoard.thirdparty.api.fanarttv.endpoints.tv.LatestTV>>() {
 					}.getType());
 				}
 

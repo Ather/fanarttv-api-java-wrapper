@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package life.thehoard.thirdparty.api.fanarttv.http;
+package media.thehoard.thirdparty.api.fanarttv.http;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -29,7 +29,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 
-import life.thehoard.thirdparty.api.fanarttv.FanartTv;
+import media.thehoard.thirdparty.api.fanarttv.FanartTv;
 
 /**
  * Generic Fanart.TV API response object

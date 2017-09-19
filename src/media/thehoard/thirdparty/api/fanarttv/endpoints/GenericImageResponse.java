@@ -13,9 +13,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package life.thehoard.thirdparty.api.fanarttv.endpoints;
+package media.thehoard.thirdparty.api.fanarttv.endpoints;
 
-import life.thehoard.thirdparty.api.fanarttv.http.GenericJson;
+import media.thehoard.thirdparty.api.fanarttv.http.GenericJson;
 
 /**
  * Generic image response for most image responses from Fanart.TV This includes

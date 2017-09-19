@@ -13,36 +13,36 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package life.thehoard.thirdparty.api.fanarttv.endpoints.tv;
+package media.thehoard.thirdparty.api.fanarttv.endpoints;
 
-import life.thehoard.thirdparty.api.fanarttv.endpoints.Latest;
+import media.thehoard.thirdparty.api.fanarttv.util.Language;
 
 /**
- * Latest TV object used for Gson. This extends the standard Latest object and
- * adds TheTVDB ID
+ * Generic image response with the language of the response added This is mostly
+ * used for posters
  * 
  * @author Michael Haas
  *
  */
-public class LatestTV extends Latest {
-	/**
-	 * TheTVDB ID of the TV Show
+public class ImageLanguageResponse extends GenericImageResponse {
+	/*
+	 * Language used in the image
 	 */
-	private Integer id;
+	private Language lang;
 
 	/**
-	 * @return the id
+	 * @return the lang
 	 */
-	public Integer getId() {
-		return id;
+	public Language getLang() {
+		return lang;
 	}
 
 	/**
-	 * @param id
-	 *            the id to set
+	 * @param lang
+	 *            the lang to set
 	 */
-	protected LatestTV setId(Integer id) {
-		this.id = id;
+	protected ImageLanguageResponse setLang(Language lang) {
+		this.lang = lang;
 		return this;
 	}
 }

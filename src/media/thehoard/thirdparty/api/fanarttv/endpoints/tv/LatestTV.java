@@ -13,26 +13,27 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package life.thehoard.thirdparty.api.fanarttv.endpoints.music;
+package media.thehoard.thirdparty.api.fanarttv.endpoints.tv;
 
-import life.thehoard.thirdparty.api.fanarttv.endpoints.Latest;
+import media.thehoard.thirdparty.api.fanarttv.endpoints.Latest;
 
 /**
- * Latest artist object used for music, adding the UUID from MusicBrainz
+ * Latest TV object used for Gson. This extends the standard Latest object and
+ * adds TheTVDB ID
  * 
  * @author Michael Haas
  *
  */
-public class LatestArtist extends Latest {
+public class LatestTV extends Latest {
 	/**
-	 * MusicBrainz UUID of the artist that was updated
+	 * TheTVDB ID of the TV Show
 	 */
-	private String id;
+	private Integer id;
 
 	/**
 	 * @return the id
 	 */
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
@@ -40,7 +41,7 @@ public class LatestArtist extends Latest {
 	 * @param id
 	 *            the id to set
 	 */
-	protected LatestArtist setId(String id) {
+	protected LatestTV setId(Integer id) {
 		this.id = id;
 		return this;
 	}

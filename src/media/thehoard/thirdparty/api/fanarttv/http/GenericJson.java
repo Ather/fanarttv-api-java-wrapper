@@ -13,18 +13,17 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package life.thehoard.thirdparty.api.fanarttv.endpoints.movie;
+package media.thehoard.thirdparty.api.fanarttv.http;
 
-import com.google.gson.annotations.SerializedName;
+import media.thehoard.thirdparty.api.fanarttv.FanartTv;
 
-/**
- * Possible disc image types for movies
- * @author Michael Haas
- *
- */
-public enum DiscType {
-	bluray,
-	dvd,
-	@SerializedName("3d")
-	ThreeD
+public class GenericJson {
+	// Add serializers to output dates in the proper formats.
+	public String toJson(boolean prettyPrint) {
+		return FanartTv.getGson().toJson(this);
+	}
+	
+	public String toJson() {
+		return toJson(false);
+	}
 }

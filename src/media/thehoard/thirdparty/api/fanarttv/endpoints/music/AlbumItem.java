@@ -13,12 +13,12 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package life.thehoard.thirdparty.api.fanarttv.endpoints.music;
+package media.thehoard.thirdparty.api.fanarttv.endpoints.music;
 
 import java.util.List;
 
-import life.thehoard.thirdparty.api.fanarttv.endpoints.GenericImageResponse;
-import life.thehoard.thirdparty.api.fanarttv.http.GenericJson;
+import media.thehoard.thirdparty.api.fanarttv.endpoints.GenericImageResponse;
+import media.thehoard.thirdparty.api.fanarttv.http.GenericJson;
 
 /**
  * AlbumItem object for use within a Map of albums returned from the Fanart.TV

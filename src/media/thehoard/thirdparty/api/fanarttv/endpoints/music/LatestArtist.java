@@ -13,36 +13,35 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package life.thehoard.thirdparty.api.fanarttv.endpoints;
+package media.thehoard.thirdparty.api.fanarttv.endpoints.music;
 
-import life.thehoard.thirdparty.api.fanarttv.util.Language;
+import media.thehoard.thirdparty.api.fanarttv.endpoints.Latest;
 
 /**
- * Generic image response with the language of the response added This is mostly
- * used for posters
+ * Latest artist object used for music, adding the UUID from MusicBrainz
  * 
  * @author Michael Haas
  *
  */
-public class ImageLanguageResponse extends GenericImageResponse {
-	/*
-	 * Language used in the image
+public class LatestArtist extends Latest {
+	/**
+	 * MusicBrainz UUID of the artist that was updated
 	 */
-	private Language lang;
+	private String id;
 
 	/**
-	 * @return the lang
+	 * @return the id
 	 */
-	public Language getLang() {
-		return lang;
+	public String getId() {
+		return id;
 	}
 
 	/**
-	 * @param lang
-	 *            the lang to set
+	 * @param id
+	 *            the id to set
 	 */
-	protected ImageLanguageResponse setLang(Language lang) {
-		this.lang = lang;
+	protected LatestArtist setId(String id) {
+		this.id = id;
 		return this;
 	}
 }

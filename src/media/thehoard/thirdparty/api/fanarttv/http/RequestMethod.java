@@ -13,17 +13,13 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package life.thehoard.thirdparty.api.fanarttv.http;
+package media.thehoard.thirdparty.api.fanarttv.http;
 
-import life.thehoard.thirdparty.api.fanarttv.FanartTv;
-
-public class GenericJson {
-	// Add serializers to output dates in the proper formats.
-	public String toJson(boolean prettyPrint) {
-		return FanartTv.getGson().toJson(this);
-	}
-	
-	public String toJson() {
-		return toJson(false);
-	}
+/**
+ * Available HTTP request methods available for the Fanart.TV API
+ * @author Michael Haas
+ *
+ */
+public enum RequestMethod {
+	GET
 }

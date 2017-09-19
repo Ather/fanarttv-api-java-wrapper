@@ -13,13 +13,18 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package life.thehoard.thirdparty.api.fanarttv.http;
+package media.thehoard.thirdparty.api.fanarttv.endpoints.movie;
+
+import com.google.gson.annotations.SerializedName;
 
 /**
- * Available HTTP request methods available for the Fanart.TV API
+ * Possible disc image types for movies
  * @author Michael Haas
  *
  */
-public enum RequestMethod {
-	GET
+public enum DiscType {
+	bluray,
+	dvd,
+	@SerializedName("3d")
+	ThreeD
 }

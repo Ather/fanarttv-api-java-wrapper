@@ -13,9 +13,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package life.thehoard.thirdparty.api.fanarttv.endpoints.movie;
+package media.thehoard.thirdparty.api.fanarttv.endpoints.movie;
 
-import life.thehoard.thirdparty.api.fanarttv.endpoints.Latest;
+import media.thehoard.thirdparty.api.fanarttv.endpoints.Latest;
 
 /**
  * Latest movie object used for Gson. This extends the standard Latest object

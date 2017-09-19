@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package life.thehoard.thirdparty.api.fanarttv.util;
+package media.thehoard.thirdparty.api.fanarttv.util;
 
 import com.google.gson.annotations.SerializedName;
 
