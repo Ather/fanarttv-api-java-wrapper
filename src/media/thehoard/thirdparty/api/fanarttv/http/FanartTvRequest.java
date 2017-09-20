@@ -127,6 +127,10 @@ public class FanartTvRequest<ContentType, ResponseType> {
 
 		// Add the API key to the request
 		requestBuilder.addParameter("api_key", FANART_TV_CLIENT.getApiKey());
+		
+		// If the personal API key was provided, add it to the request.
+		if (FANART_TV_CLIENT.getClientKey() != null)
+			requestBuilder.addParameter("client_key", FANART_TV_CLIENT.getClientKey());
 	}
 
 	/**

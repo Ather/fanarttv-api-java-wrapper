@@ -44,7 +44,7 @@ public class FanartTv {
 	 * Default complete API URL
 	 */
 	private static final String DEFAULT_API_URL = DEFAULT_ROOT_URL + DEFAULT_SERVICE_URL;
-	
+
 	/**
 	 * Default API Key
 	 */
@@ -60,15 +60,25 @@ public class FanartTv {
 	 */
 	private String apiKey;
 
+	/*
+	 * Personal API Key (optional)
+	 */
+	private String clientKey;
+
 	/**
 	 * Create a new FanartTV Client with a given API URL and Key
 	 * 
 	 * @param apiUrl
+	 *            API URL to the FanartTV API
 	 * @param apiKey
+	 *            API Key to use (project key)
+	 * @param clientKey
+	 *            Personal API Key
 	 */
-	public FanartTv(String apiUrl, String apiKey) {
+	public FanartTv(String apiUrl, String apiKey, String clientKey) {
 		this.apiUrl = apiUrl;
 		this.apiKey = apiKey;
+		this.clientKey = clientKey;
 	}
 
 	/**
@@ -79,8 +89,19 @@ public class FanartTv {
 	 *            API Key to use in the client. This can either be a project or
 	 *            personal API Key
 	 */
-	public FanartTv(String apiKey) {
-		this(DEFAULT_API_URL, apiKey);
+	public FanartTv(String apiKey, String clientKey) {
+		this(DEFAULT_API_URL, apiKey, clientKey);
+	}
+
+	/**
+	 * Create a new FanartTV Client using the default API URL, default API key, and
+	 * a provided client key
+	 * 
+	 * @param clientKey
+	 *            Client key to use along with the default project API key
+	 */
+	public FanartTv(String clientKey) {
+		this(DEFAULT_API_URL, DEFAULT_API_KEY, clientKey);
 	}
 
 	/**
@@ -648,8 +669,9 @@ public class FanartTv {
 	 * @param apiUrl
 	 *            API URL to use for Fanart.TV
 	 */
-	public void setApiUrl(String apiUrl) {
+	public FanartTv setApiUrl(String apiUrl) {
 		this.apiUrl = apiUrl;
+		return this;
 	}
 
 	/**
@@ -666,8 +688,24 @@ public class FanartTv {
 	 * @param apiKey
 	 *            API Key to use
 	 */
-	public void setApiKey(String apiKey) {
+	public FanartTv setApiKey(String apiKey) {
 		this.apiKey = apiKey;
+		return this;
+	}
+
+	/**
+	 * @return the clientKey
+	 */
+	public String getClientKey() {
+		return clientKey;
+	}
+
+	/**
+	 * @param clientKey the clientKey to set
+	 */
+	public FanartTv setClientKey(String clientKey) {
+		this.clientKey = clientKey;
+		return this;
 	}
 
 	/**

@@ -30,6 +30,18 @@ try {
 ```
 ```java
  try {
+  // You may also pass your own project API key and personal API key.
+  // getters and setters exist for the keys though, so you can also modify
+  // them yourself if a specific constructor doesn't exist.
+  FanartTv fanartTv = new FanartTv(PROJECT_API_KEY, PERSONAL_API_KEY);
+  List<LatestTV> tvUpdates = fanartTv.tv().latest().get().execute();
+  System.out.println(tvUpdates.get(0).getTotalImages());
+ } catch (IOException e) {
+  e.printStackTrace();
+ }
+```
+```java
+ try {
   FanartTv fanartTv = new FanartTv(PERSONAL_API_KEY);
   List<LatestTV> tvUpdates = fanartTv.tv().latest().get().execute();
   System.out.println(tvUpdates.get(0).getTotalImages());
