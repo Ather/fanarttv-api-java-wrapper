@@ -65,12 +65,12 @@ public class TV extends GenericJson {
 	/**
 	 * List of season posters
 	 */
-	private List<ImageLanguageResponse> seasonposter;
+	private List<SeasonImageResponse> seasonposter;
 
 	/**
 	 * List of season thumbnails
 	 */
-	private List<ImageLanguageResponse> seasonthumb;
+	private List<SeasonImageResponse> seasonthumb;
 
 	/**
 	 * List of HD clear art images
@@ -95,7 +95,7 @@ public class TV extends GenericJson {
 	/**
 	 * List of season banners
 	 */
-	private List<ImageLanguageResponse> seasonbanner;
+	private List<SeasonImageResponse> seasonbanner;
 
 	/**
 	 * @return the name
@@ -212,7 +212,7 @@ public class TV extends GenericJson {
 	/**
 	 * @return the seasonposter
 	 */
-	public List<ImageLanguageResponse> getSeasonPosters() {
+	public List<SeasonImageResponse> getSeasonPosters() {
 		return seasonposter;
 	}
 
@@ -220,7 +220,7 @@ public class TV extends GenericJson {
 	 * @param seasonposter
 	 *            the seasonposter to set
 	 */
-	protected TV setSeasonPosters(List<ImageLanguageResponse> seasonposter) {
+	protected TV setSeasonPosters(List<SeasonImageResponse> seasonposter) {
 		this.seasonposter = seasonposter;
 		return this;
 	}
@@ -228,7 +228,7 @@ public class TV extends GenericJson {
 	/**
 	 * @return the seasonthumb
 	 */
-	public List<ImageLanguageResponse> getSeasonThumbs() {
+	public List<SeasonImageResponse> getSeasonThumbs() {
 		return seasonthumb;
 	}
 
@@ -236,7 +236,7 @@ public class TV extends GenericJson {
 	 * @param seasonthumb
 	 *            the seasonthumb to set
 	 */
-	protected TV setSeasonThumbs(List<ImageLanguageResponse> seasonthumb) {
+	protected TV setSeasonThumbs(List<SeasonImageResponse> seasonthumb) {
 		this.seasonthumb = seasonthumb;
 		return this;
 	}
@@ -308,7 +308,7 @@ public class TV extends GenericJson {
 	/**
 	 * @return the seasonbanner
 	 */
-	public List<ImageLanguageResponse> getSeasonBanners() {
+	public List<SeasonImageResponse> getSeasonBanners() {
 		return seasonbanner;
 	}
 
@@ -316,7 +316,7 @@ public class TV extends GenericJson {
 	 * @param seasonbanner
 	 *            the seasonbanner to set
 	 */
-	protected TV setSeasonBanners(List<ImageLanguageResponse> seasonbanner) {
+	protected TV setSeasonBanners(List<SeasonImageResponse> seasonbanner) {
 		this.seasonbanner = seasonbanner;
 		return this;
 	}

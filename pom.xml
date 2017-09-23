@@ -4,6 +4,13 @@
   <artifactId>fanarttv-api-wrapper</artifactId>
   <name>Fanart.TV API Wrapper</name>
   <description>Java API Wrapper for Fanart.TV</description>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -17,7 +24,7 @@
       </plugin>
     </plugins>
   </build>
-  <version>1.0.2.11</version>
+  <version>1.0.2.12</version>
   <dependencies>
   	<dependency>
   		<groupId>com.google.code.gson</groupId>
@@ -31,13 +38,18 @@
   	</dependency>
   </dependencies>
   <organization>
-  	<name>The Hoard</name>
-  	<url>https://www.thehoard.life</url>
+  	<name>The Hoard Media</name>
+  	<url>https://www.thehoard.media</url>
   </organization>
   <issueManagement>
   	<system>GitHub</system>
-  	<url>https://github.com/The-Hoard/fanarttv-api-wrapper/issues</url>
+  	<url>https://github.com/The-Hoard-Media/fanarttv-api-wrapper/issues</url>
   </issueManagement>
-  <url>https://github.com/The-Hoard/fanarttv-api-wrapper/</url>
+  <url>https://github.com/The-Hoard-Media/fanarttv-api-wrapper</url>
   <inceptionYear>2017</inceptionYear>
+  <scm>
+  	<connection>scm:git:git://github.com/The-Hoard-Media/fanarttv-api-wrapper.git</connection>
+  	<url>https://github.com/The-Hoard-Media/fanarttv-api-wrapper</url>
+  	<developerConnection>scm:git:git@github.com:The-Hoard-Media/fanarttv-api-wrapper.git</developerConnection>
+  </scm>
 </project>
